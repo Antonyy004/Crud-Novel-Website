@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+/* Navbar Styling */
+.navbar {
+  padding: 2rem 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: 1px solid #fbbc05;
+}
+
+.navbar-brand,
+.nav-link {
+  font-size: 2rem;
+}
+.navbar-brand img {
+  width: 200px;
+  height: auto;
+}
+.btn-outline-light {
+  color: #fbbc05;
+  border-color: #fbbc05;
+}
+
+.btn-outline-light:hover {
+  background-color: #fbbc05;
+  color: #fff;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 20px;
+}
+
+/* Container Hero */
+.container-hero {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50vh;
+  flex-wrap: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#carouselExampleAutoplaying {
+  width: 23%;
+  height: auto;
+  margin-left: auto;
+  margin-right: 200px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-teks {
+  text-align: left;
+  margin-left: 200px;
+  max-width: 60%;
+}
+
+.hero-teks h1 {
+  font-weight: bold;
+  color: #fbbc05;
+}
+
+.hero-teks h2 {
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  #carouselExampleAutoplaying {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .container-hero {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .hero-teks {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-teks h1 {
+    font-size: 2rem;
+  }
+
+  .hero-teks h2 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-teks h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-teks h2 {
+    font-size: 1rem;
+  }
+}
+
+/* CSS untuk strip tulisan bergerak */
+.marquee-container {
+  background-color: black; /* Warna latar belakang hitam */
+  padding: 10px 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Pastikan kontainer memiliki lebar penuh */
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 18px;
+  color: #fbbc05; /* Ubah warna teks menjadi putih agar kontras dengan latar belakang hitam */
+  /* Hapus animasi jika menggunakan JS */
+  white-space: nowrap;
+  text-align: center;
+}
+
+.marquee-text span {
+  margin-right: 30px; /* Menambahkan jarak antar setiap kalimat */
+}
+
+.container-novel-update {
+  background-color: #fbbc05;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #fbbc05; /* Bright yellow background */
+  color: black; /* Text color */
+  padding: 40px 20px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Flexbox to arrange footer items */
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Distribute space between sections */
+  align-items: flex-start; /* Align the items at the top */
+  width: 100%;
+}
+
+/* Ensure each section is well spaced */
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  text-align: center; /* Center align text by default */
+}
+
+/* Align "BacaYuks" to the left */
+.footer-left {
+  text-align: left;
+}
+
+/* Align "Follow Us" to the right */
+.footer-right {
+  text-align: right;
+}
+
+/* Header Styling */
+.footer h5 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: black; /* Accent color */
+}
+
+.footer p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black; /* Footer text color */
+}
+
+.footer-links,
+.social-media {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li,
+.social-media li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.social-media a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.social-media a:hover {
+  color: #333; /* Darker color on hover */
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.875rem;
+  text-align: center; /* Center-align the bottom text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    align-items: center; /* Vertically align items in center */
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin-bottom: 20px; /* Space between sections when stacked */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer h5 {
+    font-size: 1.1rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+
+  .footer-links a,
+  .social-media a {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    font-size: 1.25rem;
+  }
+}
+
+/* Styling untuk card */
+.card {
+  border: none; /* Menghilangkan border standar */
+  border-radius: 15px; /* Memberikan sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut */
+  transition: transform 0.3s ease-in-out; /* Efek transisi saat hover */
+  overflow: hidden;
+  background-color: #fff; /* Warna latar belakang putih */
+  height: 500px; /* Menetapkan tinggi card tetap */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Efek hover agar card sedikit terangkat */
+}
+
+.card-img-top {
+  border-bottom: 3px solid #fbbc05; /* Menambahkan garis bawah pada gambar */
+  height: 300px; /* Tinggi gambar tetap */
+  object-fit: cover; /* Menyesuaikan gambar agar tidak terdistorsi */
+}
+
+.card-body {
+  padding: 15px; /* Padding di dalam card */
+  display: flex;
+  flex-direction: column; /* Membuat konten card diatur secara vertikal */
+  justify-content: space-between; /* Memberikan jarak antara judul, teks, dan tombol */
+  height: 100%; /* Memastikan card-body mengisi seluruh tinggi card */
+}
+
+.card-title {
+  font-size: 1.25rem; /* Ukuran font judul */
+  font-weight: bold; /* Menebalkan font judul */
+  margin-bottom: 10px; /* Jarak bawah judul */
+  color: #333; /* Warna teks judul */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666; /* Warna teks deskripsi */
+  margin-bottom: 15px; /* Memberikan jarak antara teks dan tombol */
+  flex-grow: 1; /* Membuat teks berkembang agar mengisi ruang yang ada */
+}
+
+.btn-primary {
+  background-color: #fbbc05; /* Warna tombol sesuai dengan tema */
+  border: none;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e89a00; /* Warna saat tombol di-hover */
+}
