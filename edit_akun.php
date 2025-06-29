@@ -8,9 +8,9 @@ if (!isset($_SESSION['logged_in'])) {
 }
 
 // Koneksi ke database
-$host = 'localhost';
-$username = 'root';
-$password = '';
+$host = 'db.be-mons1.bengt.wasmernet.com';
+$username = '0d5c216a70dd8000b60a44c86b34';
+$password = '06860d5c-216a-7205-8000-2abbc29cfc7b';
 $database = 'web_novel';
 $conn = new mysqli($host, $username, $password, $database);
 
